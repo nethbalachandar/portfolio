@@ -1,0 +1,16 @@
+This is a placeholder for the wafer defect detection CNN output image.
+
+In a real implementation, this would be a PNG image showing:
+- Original wafer image with defects
+- Processed image with detected defects highlighted
+- Bounding boxes around identified defect regions
+- Classification labels for each defect type
+- Confidence scores for predictions
+
+The image should demonstrate the CNN's ability to:
+1. Accurately detect various defect types (cracks, voids, scratches)
+2. Localize defects with precise bounding boxes
+3. Classify defects with high confidence scores
+4. Handle multiple defects in a single wafer image
+
+Replace this file with an actual PNG showing your model's output visualization.

@@ -1,0 +1,21 @@
+This is a placeholder for Nethra Balachandar's resume PDF file.
+
+In a real implementation, you would:
+1. Create a proper PDF version of the resume using the content from the HTML
+2. Replace this file with the actual PDF
+3. Ensure the download link in index.html points to the correct PDF file
+
+The resume should include all the information displayed in the resume section of the website:
+- Professional Summary
+- Education (Purdue University, SSN College)
+- Experience (BMW, Research positions, Amazon)
+- Academic Projects
+- Technical Skills
+- Additional Courses
+
+Contact Information:
+Nethra Balachandar
+Lafayette, Indiana
++1 (502) 615-6755
+nethra.balachandar@gmail.com
+linkedin.com/in/nethra-balachandar

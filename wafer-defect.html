@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wafer Defect Detection – Nethra Balachandar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Wafer Defect Detection Using Convolutional Neural Networks</h1>
+    <p><a href="index.html">← Back to Portfolio</a></p>
+  </header>
+
+  <section>
+    <h2>🔍 Overview</h2>
+    <p>This project applies convolutional neural networks (CNNs) to identify and localize defects in wafer images, simulating a semiconductor manufacturing quality control pipeline.</p>
+  </section>
+
+  <section>
+    <h2>🧩 Problem Statement</h2>
+    <p>Defects in semiconductor wafers can significantly impact device yield and reliability. Manual inspection is time-consuming and error-prone. This project explores automated image-based defect detection using deep learning.</p>
+  </section>
+
+  <section>
+    <h2>🛠️ Tools & Technologies Used</h2>
+    <ul>
+      <li>Python, OpenCV, NumPy, Matplotlib</li>
+      <li>Keras + TensorFlow backend</li>
+      <li>Custom dataset (mock wafer defect images)</li>
+      <li>Jupyter Notebook for experimentation</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🧠 How It Works: A to Z</h2>
+    <ol>
+      <li><strong>Data Collection:</strong> Gathered and simulated wafer defect image data using open-source examples and augmentation.</li>
+      <li><strong>Preprocessing:</strong> Normalized, resized (128x128), and augmented data using flipping, noise injection, and rotation.</li>
+      <li><strong>Model Architecture:</strong> Built a 3-layer CNN with ReLU activation, dropout, and max-pooling. Output layer used softmax for multi-class defect classification.</li>
+      <li><strong>Training:</strong> Used categorical crossentropy loss, Adam optimizer, 20 epochs, and an 80:20 train-test split. Achieved ~92% test accuracy.</li>
+      <li><strong>Defect Localization:</strong> Overlaid detected regions using bounding boxes with OpenCV.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>📊 Results</h2>
+    <p>The trained model classified common defect types like cracks, voids, and scratches with high accuracy. Below is a sample output:</p>
+    <img src="images/wafer_output.png" alt="Wafer Defect CNN Output" width="80%" />
+
+    <p>Performance Metrics:</p>
+    <ul>
+      <li>Accuracy: 92%</li>
+      <li>F1-Score: 0.90</li>
+      <li>Confusion matrix and ROC curve analysis showed balanced performance across defect classes.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🔗 GitHub Repository</h2>
+    <p>View the full code and dataset setup here:  
+    <a href="https://github.com/nethbalachandar/wafer-defect-cnn" target="_blank">github.com/nethbalachandar/wafer-defect-cnn</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Nethra Balachandar</p>
+  </footer>
+</body>
+</html>
 

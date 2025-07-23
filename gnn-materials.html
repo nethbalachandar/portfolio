@@ -8,74 +8,89 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Graph Neural Networks for Materials Selection</h1>
-    <p><a href="index.html">← Back to Portfolio</a></p>
+  <header class="header">
+    <div class="container header-content">
+      <h1>Graph Neural Networks for Materials Selection</h1>
+      <p class="project-subtitle">Leveraging GNNs for intelligent materials discovery</p>
+      <a class="back-link" href="index.html">← Back to Portfolio</a>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>🔍 Overview</h2>
-      <p>This project explores the use of Graph Neural Networks (GNNs) to predict material properties and support data-driven materials selection. GNNs capture structural relationships between atoms and bonds to model physical behavior in materials science.</p>
+  <main class="main-content container">
+    <section class="content-section">
+      <div class="section-header">
+        <h2><i class="fas fa-search"></i> Overview</h2>
+      </div>
+      <p>This project explores the use of Graph Neural Networks (GNNs) to predict material properties and support data-driven materials selection.</p>
     </section>
 
-    <section>
-      <h2>📌 Problem Statement</h2>
-      <p>Material discovery and optimization are bottlenecked by costly experiments and simulations. Classical ML struggles to model crystalline structures. GNNs offer a way to directly learn from atomic graphs to predict mechanical, electronic, or thermodynamic properties.</p>
+    <section class="content-section">
+      <div class="section-header">
+        <h2><i class="fas fa-thumbtack"></i> Problem Statement</h2>
+      </div>
+      <p>Material discovery is slow and expensive. GNNs help model crystalline structures directly and predict their properties efficiently.</p>
     </section>
 
-    <section>
-      <h2>🧠 Approach</h2>
+    <section class="content-section">
+      <div class="section-header">
+        <h2><i class="fas fa-brain"></i> Approach</h2>
+      </div>
       <ol>
-        <li><strong>Data Source:</strong> Used the Materials Project database (via <code>pymatgen</code>) to extract structural and property data.</li>
-        <li><strong>Graph Construction:</strong> Built atom-bond graphs from crystal structures using <code>pymatgen</code> and <code>matminer</code>.</li>
-        <li><strong>Modeling:</strong> Used PyTorch Geometric to train a GNN (based on Message Passing Neural Network architecture) to predict properties such as formation energy and band gap.</li>
-        <li><strong>Evaluation:</strong> Used MAE and R² to assess regression performance on a held-out test set.</li>
+        <li><strong>Data Source:</strong> Materials Project database via <code>pymatgen</code></li>
+        <li><strong>Graph Construction:</strong> Crystal structure graphs using <code>pymatgen</code> + <code>matminer</code></li>
+        <li><strong>Modeling:</strong> PyTorch Geometric + MPNN</li>
+        <li><strong>Evaluation:</strong> MAE, R² on test set</li>
       </ol>
     </section>
 
-    <section>
-      <h2>🛠️ Tools & Technologies</h2>
+    <section class="content-section">
+      <div class="section-header">
+        <h2><i class="fas fa-tools"></i> Tools & Technologies</h2>
+      </div>
       <ul>
-        <li>Python, PyTorch Geometric, NumPy, pandas</li>
+        <li>Python, PyTorch Geometric, NumPy</li>
         <li>pymatgen, matminer, ASE</li>
         <li>Jupyter Notebook</li>
         <li>Materials Project API</li>
       </ul>
     </section>
 
-    <section>
-      <h2>📊 Results</h2>
-      <p>The GNN model achieved:</p>
+    <section class="content-section">
+      <div class="section-header">
+        <h2><i class="fas fa-chart-bar"></i> Results</h2>
+      </div>
       <ul>
-        <li>MAE: 0.047 eV/atom on formation energy</li>
+        <li>MAE: 0.047 eV/atom</li>
         <li>R² Score: 0.92</li>
-        <li>Consistent generalization to unseen crystal systems</li>
+        <li>Generalizes well to new crystal systems</li>
       </ul>
       <img src="images/gnn-materials-output.png" alt="GNN Prediction Results" width="80%">
     </section>
 
-    <section>
-      <h2>🌍 Applications</h2>
+    <section class="content-section">
+      <div class="section-header">
+        <h2><i class="fas fa-globe"></i> Applications</h2>
+      </div>
       <ul>
-        <li>Accelerated screening of materials for semiconductors, catalysis, and batteries</li>
-        <li>Improved interpretability through atom-level attention maps</li>
-        <li>Scalable integration with high-throughput materials pipelines</li>
+        <li>Semiconductors, catalysis, battery design</li>
+        <li>Interpretability with attention maps</li>
+        <li>Integrates into high-throughput pipelines</li>
       </ul>
     </section>
 
-    <section>
-      <h2>🔗 GitHub Repository</h2>
-      <p>View full implementation and notebook here:  
-        <a href="https://github.com/nethbalachandar/gnn-materials-selection" target="_blank">github.com/nethbalachandar/gnn-materials-selection</a>
-      </p>
+    <section class="content-section">
+      <div class="section-header">
+        <h2><i class="fab fa-github"></i> GitHub Repository</h2>
+      </div>
+      <p>Check it out: <a href="https://github.com/nethbalachandar/gnn-materials-selection" target="_blank">github.com/nethbalachandar/gnn-materials-selection</a></p>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>© 2025 Nethra Balachandar</p>
   </footer>
 
-  <script src="gnn-materials-script.js"></script>
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>

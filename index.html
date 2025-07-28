@@ -3,370 +3,535 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nethra Balachandar - Materials Engineer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Yield Optimization in Semiconductor Manufacturing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .code-block { max-height: 400px; overflow-y: auto; }
+        .hidden { display: none; }
+        .smooth-transition { transition: all 0.3s ease-in-out; }
+    </style>
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="nav-brand">
-                <h1>Nethra Balachandar</h1>
-                <p>Materials Engineer</p>
-            </div>
-            <nav class="nav">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#resume" class="nav-link">Resume</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#learning" class="nav-link">Learning Log</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-            <button class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Materials Engineer & Researcher</h2>
-                <p class="hero-description">
-                    Specializing in semiconductor process optimization, battery degradation analysis, and advanced materials characterization. 
-                    Currently pursuing Masters in Materials Science Engineering at Purdue University.
-                </p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">85%</span>
-                        <span class="stat-label">Yield Classification Accuracy</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">15%</span>
-                        <span class="stat-label">Battery Cycle Life Improvement</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">98%</span>
-                        <span class="stat-label">Cr(VI) Removal Efficiency</span>
-                    </div>
-                </div>
-                <div class="hero-contact">
-                    <a href="mailto:nethra.balachandar@gmail.com" class="contact-link">
-                        <i class="fas fa-envelope"></i>
-                        nethra.balachandar@gmail.com
-                    </a>
-                    <a href="https://linkedin.com/in/nethra-balachandar" class="contact-link" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                        LinkedIn
-                    </a>
-                    <span class="contact-link">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Lafayette, Indiana
-                    </span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume" class="section">
-        <div class="container">
-            <h2 class="section-title">Resume</h2>
-            <div class="resume-content">
-                <div class="resume-summary">
-                    <h3>Professional Summary</h3>
-                    <p>Materials Engineer with hands-on experience in semiconductor process optimization, defect detection, and battery degradation analysis. Skilled in DOE, JMP, and SPC, with practical exposure to etch, deposition, photolithography, and material characterization using FTIR, SEM, and XRD.</p>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 smooth-transition">
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-white dark:bg-gray-800 shadow-lg z-50 smooth-transition">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400">Yield Optimization</h1>
                 </div>
                 
-                <div class="resume-sections">
-                    <div class="resume-section">
-                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                        <div class="resume-item">
-                            <h4>Masters in Materials Science Engineering</h4>
-                            <p class="institution">Purdue University – West Lafayette, IN</p>
-                            <p class="date">Aug 2023 – May 2025</p>
-                            <p class="coursework">Relevant Coursework: Solid State Device Physics, Failure Analysis, Thin Films Deposition, Plasma Lab, MEMS Fab</p>
-                        </div>
-                        <div class="resume-item">
-                            <h4>B. Tech Chemical Engineering</h4>
-                            <p class="institution">Sri Sivasubramaniya Nadar College of Engineering – Chennai, India</p>
-                            <p class="date">Jun 2018 – May 2022</p>
-                            <p class="coursework">Relevant Coursework: Electrochemistry, Mass Transport, Chemical Kinetics, Advanced Thermodynamics</p>
-                        </div>
-                    </div>
-
-                    <div class="resume-section">
-                        <h3><i class="fas fa-briefcase"></i> Experience</h3>
-                        <div class="resume-item">
-                            <h4>E-Mobility Intern</h4>
-                            <p class="institution">BMW Head of Technology Office, Mountain View, CA</p>
-                            <p class="date">May 2024 – Aug 2024</p>
-                            <ul>
-                                <li>Automated battery R&D data workflows, increasing efficiency by 30%</li>
-                                <li>Compiled and synthesized key trends from R&D activities at 20+ US universities</li>
-                                <li>Collaborated with cross-functional teams on advanced battery materials</li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Graduate Research Assistant</h4>
-                            <p class="institution">Purdue University</p>
-                            <p class="date">Aug 2023 – May 2024</p>
-                            <ul>
-                                <li>Improved lithium-ion battery electrode stability, increasing cycle life by 15%</li>
-                                <li>Modeled phase equilibria and transformations in alloys using computational techniques</li>
-                                <li>Presented research findings through technical reports and presentations</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="resume-section">
-                        <h3><i class="fas fa-code"></i> Technical Skills</h3>
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h4>Programming</h4>
-                                <p>Python, C, C++, R</p>
-                            </div>
-                            <div class="skill-category">
-                                <h4>Design Software</h4>
-                                <p>AutoCAD, SolidWorks, Fusion360, CATIA</p>
-                            </div>
-                            <div class="skill-category">
-                                <h4>Data Analysis</h4>
-                                <p>JMP, MATLAB, SQL</p>
-                            </div>
-                            <div class="skill-category">
-                                <h4>Simulation</h4>
-                                <p>Ansys, ThermoCalc</p>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#overview" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 smooth-transition">Overview</a>
+                    <a href="#preprocessing" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 smooth-transition">Data Preprocessing</a>
+                    <a href="#feature-selection" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 smooth-transition">Feature Selection</a>
+                    <a href="#modeling" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 smooth-transition">Modeling</a>
+                    <a href="#evaluation" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 smooth-transition">Evaluation</a>
+                    <a href="#deployment" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 smooth-transition">Deployment</a>
+                    <a href="#downloads" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 smooth-transition">Downloads</a>
                 </div>
 
-                <div class="resume-download">
-                    <a href="resume.pdf" class="btn btn-primary" download>
-                        <i class="fas fa-download"></i>
-                        Download Full Resume (PDF)
-                    </a>
-                </div>
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 smooth-transition">
+                    <i data-lucide="sun" class="w-5 h-5 dark:hidden"></i>
+                    <i data-lucide="moon" class="w-5 h-5 hidden dark:block"></i>
+                </button>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden p-2">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
         </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Key Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Yield Optimization in Semiconductor Manufacturing</h3>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">JMP</span>
-                            <span class="tag">DOE</span>
-                            <span class="tag">XGBoost</span>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Applied Design of Experiments and XGBoost-based modeling on SECOM sensor data to identify critical semiconductor process variables, improving yield classification accuracy by 85% and enabling data-driven process control recommendations.
-                    </p>
-                    <div class="project-metrics">
-                        <div class="metric">
-                            <span class="metric-value">85%</span>
-                            <span class="metric-label">Accuracy Improvement</span>
-                        </div>
-                    </div>
-                    <div class="project-actions">
-                        <a href="yield-optimization.html" class="project-link">
-                            <i class="fas fa-arrow-right"></i>
-                            View Details
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Automated Wafer Defect Detection</h3>
-                        <div class="project-tags">
-                            <span class="tag">CNN</span>
-                            <span class="tag">Deep Learning</span>
-                            <span class="tag">Computer Vision</span>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Developed a custom Convolutional Neural Network for wafer defect classification, achieving 90% validation accuracy and reducing manual inspection effort through optimized learning rate and model architecture tuning.
-                    </p>
-                    <div class="project-metrics">
-                        <div class="metric">
-                            <span class="metric-value">90%</span>
-                            <span class="metric-label">Validation Accuracy</span>
-                        </div>
-                    </div>
-                    <div class="project-actions">
-                        <a href="wafer-defect.html" class="project-link">
-                            <i class="fas fa-arrow-right"></i>
-                            View Details
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>GUI-Integrated GNN for Material Properties</h3>
-                        <div class="project-tags">
-                            <span class="tag">GNN</span>
-                            <span class="tag">Python GUI</span>
-                            <span class="tag">Materials Science</span>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Built an interactive Python GUI to visualize predictions and feature relevance of crystal property models using Graph Neural Networks, improving user accessibility and model explainability for researchers.
-                    </p>
-                    <div class="project-metrics">
-                        <div class="metric">
-                            <span class="metric-value">Enhanced</span>
-                            <span class="metric-label">User Experience</span>
-                        </div>
-                    </div>
-                    <div class="project-actions">
-                        <a href="gnn-materials.html" class="project-link">
-                            <i class="fas fa-arrow-right"></i>
-                            View Details
-                        </a>
-                    </div>
-                </div>
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#overview" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700">Overview</a>
+                <a href="#preprocessing" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700">Data Preprocessing</a>
+                <a href="#feature-selection" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700">Feature Selection</a>
+                <a href="#modeling" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700">Modeling</a>
+                <a href="#evaluation" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700">Evaluation</a>
+                <a href="#deployment" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700">Deployment</a>
+                <a href="#downloads" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700">Downloads</a>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- Learning Log Section -->
-    <section id="learning" class="section">
-        <div class="container">
-            <h2 class="section-title">Learning Log</h2>
-            <p class="section-subtitle">Curated articles and resources that shape my understanding of materials science and engineering</p>
-            
-            <div class="learning-grid">
-                <article class="learning-card">
-                    <div class="learning-header">
-                        <h3>Advanced Semiconductor Process Control</h3>
-                        <span class="learning-date">Recent</span>
-                    </div>
-                    <p class="learning-excerpt">
-                        Exploring the latest developments in statistical process control for semiconductor manufacturing, including machine learning approaches to defect prediction and yield optimization.
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Overview Section -->
+        <section id="overview" class="mb-16">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 smooth-transition">
+                <div class="text-center mb-8">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                        Yield Optimization in Semiconductor Manufacturing
+                    </h1>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 mb-6">
+                        A Data-Driven Approach using XGBoost and Mutual Information
                     </p>
-                    <div class="learning-tags">
-                        <span class="tag">Semiconductor</span>
-                        <span class="tag">SPC</span>
-                        <span class="tag">ML</span>
-                    </div>
-                    <a href="#" class="learning-link">Read More <i class="fas fa-arrow-right"></i></a>
-                </article>
+                </div>
 
-                <article class="learning-card">
-                    <div class="learning-header">
-                        <h3>Battery Material Innovations</h3>
-                        <span class="learning-date">This Week</span>
+                <!-- Quick Facts -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 text-center">
+                        <div class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">590</div>
+                        <div class="text-gray-700 dark:text-gray-300">📊 Sensor Features</div>
                     </div>
-                    <p class="learning-excerpt">
-                        Deep dive into next-generation battery electrode materials, focusing on degradation mechanisms and strategies for improving cycle life in lithium-ion systems.
-                    </p>
-                    <div class="learning-tags">
-                        <span class="tag">Batteries</span>
-                        <span class="tag">Materials</span>
-                        <span class="tag">Electrochemistry</span>
+                    <div class="bg-red-50 dark:bg-red-900/20 rounded-lg p-6 text-center">
+                        <div class="text-3xl font-bold text-red-600 dark:text-red-400 mb-2">93% / 7%</div>
+                        <div class="text-gray-700 dark:text-gray-300">⚖️ Fails / Passes</div>
                     </div>
-                    <a href="#" class="learning-link">Read More <i class="fas fa-arrow-right"></i></a>
-                </article>
+                    <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 text-center">
+                        <div class="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">Median</div>
+                        <div class="text-gray-700 dark:text-gray-300">🧼 Imputation Method</div>
+                    </div>
+                </div>
 
-                <article class="learning-card">
-                    <div class="learning-header">
-                        <h3>Graph Neural Networks in Materials Discovery</h3>
-                        <span class="learning-date">Last Week</span>
-                    </div>
-                    <p class="learning-excerpt">
-                        Understanding how GNNs are revolutionizing materials property prediction, with applications in crystal structure analysis and property optimization.
+                <!-- Summary -->
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
+                    <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                        This project explores data-driven methods for yield improvement in semiconductor manufacturing using the SECOM dataset with 1,567 samples and 590 sensor features. Through effective data preprocessing, feature selection using mutual information, and XGBoost modeling, we identified key process parameters that influence yield outcomes, providing actionable insights for process control and optimization.
                     </p>
-                    <div class="learning-tags">
-                        <span class="tag">GNN</span>
-                        <span class="tag">AI/ML</span>
-                        <span class="tag">Materials Discovery</span>
-                    </div>
-                    <a href="#" class="learning-link">Read More <i class="fas fa-arrow-right"></i></a>
-                </article>
-
-                <article class="learning-card">
-                    <div class="learning-header">
-                        <h3>MEMS Fabrication Techniques</h3>
-                        <span class="learning-date">2 Weeks Ago</span>
-                    </div>
-                    <p class="learning-excerpt">
-                        Comprehensive review of modern MEMS fabrication processes, including plasma etching, thin film deposition, and photolithography optimization techniques.
-                    </p>
-                    <div class="learning-tags">
-                        <span class="tag">MEMS</span>
-                        <span class="tag">Fabrication</span>
-                        <span class="tag">Plasma</span>
-                    </div>
-                    <a href="#" class="learning-link">Read More <i class="fas fa-arrow-right"></i></a>
-                </article>
+                </div>
             </div>
+        </section>
 
-            <div class="newsletter-signup">
-                <h3>Stay Updated</h3>
-                <p>Subscribe to get notified about my latest learning insights and project updates</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email" class="newsletter-input">
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
+        <!-- Data Preprocessing Section -->
+        <section id="preprocessing" class="mb-16">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 smooth-transition">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">🧹 Data Preprocessing</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6">
+                        <div class="flex items-center mb-3">
+                            <i data-lucide="droplets" class="w-6 h-6 text-blue-600 dark:text-blue-400 mr-2"></i>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Median Imputation</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300">Robust to outliers and handles non-normal distributions effectively</p>
+                    </div>
+                    <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-6">
+                        <div class="flex items-center mb-3">
+                            <i data-lucide="scale" class="w-6 h-6 text-green-600 dark:text-green-400 mr-2"></i>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">StandardScaler</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300">Normalized features to zero mean and unit variance</p>
+                    </div>
+                    <div class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6">
+                        <div class="flex items-center mb-3">
+                            <i data-lucide="split" class="w-6 h-6 text-purple-600 dark:text-purple-400 mr-2"></i>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Train-Test Split</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300">80/20 split with stratification to maintain class balance</p>
+                    </div>
+                </div>
+
+                <div class="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4 mb-6">
+                    <div class="flex items-center">
+                        <i data-lucide="alert-triangle" class="w-5 h-5 text-yellow-600 dark:text-yellow-400 mr-2"></i>
+                        <span class="text-yellow-800 dark:text-yellow-200 font-medium">116 zero-variance features removed</span>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <button id="preprocessing-code-toggle" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg smooth-transition">
+                        <i data-lucide="code" class="w-4 h-4 inline mr-2"></i>Show Code
+                    </button>
+                </div>
+
+                <div id="preprocessing-code" class="hidden">
+                    <pre class="code-block bg-gray-900 text-gray-100 p-6 rounded-lg overflow-x-auto"><code>import pandas as pd
+import numpy as np
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+
+# Handle missing values
+print("Missing Values Before Imputation:", data.isnull().sum().sum())
+data.fillna(data.median(), inplace=True)
+print("Missing Values After Imputation:", data.isnull().sum().sum())
+
+# Convert labels from {-1, 1} to {0, 1}
+data['Label'] = data['Label'].map({-1: 0, 1: 1})
+print("Updated Label Distribution:\n", data['Label'].value_counts())
+
+# Separate features and labels
+X = data.drop('Label', axis=1)
+y = data['Label']
+
+# Standardize features
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+X_scaled = pd.DataFrame(X_scaled, columns=X.columns)
+
+# Train-test split
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y,
+    test_size=0.2, random_state=42, stratify=y)</code></pre>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-dark">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:nethra.balachandar@gmail.com">nethra.balachandar@gmail.com</a>
+        <!-- Feature Selection Section -->
+        <section id="feature-selection" class="mb-16">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 smooth-transition">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">🔍 Feature Selection</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-red-50 dark:bg-red-900/20 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-red-600 dark:text-red-400 mr-2"></i>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">ANOVA Approach</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3">
+                            Initial attempt using Analysis of Variance failed due to tokenizing errors and poor statistical significance.
+                        </p>
+                        <div class="bg-red-100 dark:bg-red-900/40 rounded p-3">
+                            <span class="text-red-800 dark:text-red-200 font-mono text-sm">Sensor_1 p-value: 0.321</span>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <h4>LinkedIn</h4>
-                            <a href="https://linkedin.com/in/nethra-balachandar" target="_blank">linkedin.com/in/nethra-balachandar</a>
+
+                    <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-green-600 dark:text-green-400 mr-2"></i>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Mutual Information</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3">
+                            Successful approach that captures non-linear relationships and identifies the most predictive features.
+                        </p>
+                        <div class="bg-green-100 dark:bg-green-900/40 rounded p-3">
+                            <span class="text-green-800 dark:text-green-200 font-mono text-sm">Top 50 features selected</span>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
+                </div>
+
+                <!-- Top 10 Features Chart -->
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Top 10 Features by Mutual Information</h3>
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                        <canvas id="featureChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <button id="feature-code-toggle" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg smooth-transition">
+                        <i data-lucide="code" class="w-4 h-4 inline mr-2"></i>Show MI Calculation Code
+                    </button>
+                </div>
+
+                <div id="feature-code" class="hidden">
+                    <pre class="code-block bg-gray-900 text-gray-100 p-6 rounded-lg overflow-x-auto"><code>from sklearn.feature_selection import mutual_info_classif
+
+# Compute mutual information for non-constant features
+mi_scores = mutual_info_classif(X_scaled[non_constant_features], y, random_state=42)
+mi_scores = pd.Series(mi_scores, index=non_constant_features)
+mi_scores = mi_scores.sort_values(ascending=False)
+
+# Select top 50 features
+top_features = mi_scores.index[:50].tolist()
+X_train_selected = X_train[top_features]
+X_test_selected = X_test[top_features]</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modeling Section -->
+        <section id="modeling" class="mb-16">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 smooth-transition">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">⚙️ Modeling</h2>
+                
+                <!-- Model Comparison Tabs -->
+                <div class="mb-6">
+                    <div class="border-b border-gray-200 dark:border-gray-600">
+                        <nav class="-mb-px flex space-x-8">
+                            <button class="model-tab active border-b-2 border-blue-500 text-blue-600 dark:text-blue-400 py-2 px-1 text-sm font-medium" data-target="baseline">
+                                XGBoost Baseline
+                            </button>
+                            <button class="model-tab border-b-2 border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 py-2 px-1 text-sm font-medium" data-target="smote">
+                                With SMOTE
+                            </button>
+                            <button class="model-tab border-b-2 border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 py-2 px-1 text-sm font-medium" data-target="tuned">
+                                Tuned XGBoost
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Baseline Model -->
+                <div id="baseline" class="model-content">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <div>
-                            <h4>Phone</h4>
-                            <span>+1 (502) 615-6755</span>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Performance Metrics</h3>
+                            <div class="space-y-4">
+                                <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
+                                    <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">93.9%</div>
+                                    <div class="text-gray-600 dark:text-gray-300">Accuracy</div>
+                                </div>
+                                <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
+                                    <div class="text-2xl font-bold text-green-600 dark:text-green-400">0.30</div>
+                                    <div class="text-gray-600 dark:text-gray-300">F1-Score (Pass)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Classification Report</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full bg-gray-50 dark:bg-gray-700 rounded-lg">
+                                    <thead>
+                                        <tr class="border-b border-gray-200 dark:border-gray-600">
+                                            <th class="px-4 py-2 text-left text-gray-900 dark:text-white">Class</th>
+                                            <th class="px-4 py-2 text-left text-gray-900 dark:text-white">Precision</th>
+                                            <th class="px-4 py-2 text-left text-gray-900 dark:text-white">Recall</th>
+                                            <th class="px-4 py-2 text-left text-gray-900 dark:text-white">F1-Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-600 dark:text-gray-300">
+                                        <tr>
+                                            <td class="px-4 py-2">Fail (0)</td>
+                                            <td class="px-4 py-2">0.94</td>
+                                            <td class="px-4 py-2">0.99</td>
+                                            <td class="px-4 py-2">0.97</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Pass (1)</td>
+                                            <td class="px-4 py-2">0.67</td>
+                                            <td class="px-4 py-2">0.19</td>
+                                            <td class="px-4 py-2">0.30</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                </div>
+
+                <!-- SMOTE Model -->
+                <div id="smote" class="model-content hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <div>
-                            <h4>Location</h4>
-                            <span>Lafayette, Indiana</span>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Performance Metrics</h3>
+                            <div class="space-y-4">
+                                <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
+                                    <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">91.7%</div>
+                                    <div class="text-gray-600 dark:text-gray-300">Accuracy</div>
+                                </div>
+                                <div class="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-4">
+                                    <div class="text-2xl font-bold text-orange-600 dark:text-orange-400">0.28</div>
+                                    <div class="text-gray-600 dark:text-gray-300">F1-Score (Pass)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Confusion Matrix</h3>
+                            <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                                <canvas id="confusionMatrix" width="300" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tuned Model -->
+                <div id="tuned" class="model-content hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Performance Metrics</h3>
+                            <div class="space-y-4">
+                                <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
+                                    <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">92.0%</div>
+                                    <div class="text-gray-600 dark:text-gray-300">Accuracy</div>
+                                </div>
+                                <div class="bg-red-50 dark:bg-red-900/20 rounded-lg p-4">
+                                    <div class="text-2xl font-bold text-red-600 dark:text-red-400">0.24</div>
+                                    <div class="text-gray-600 dark:text-gray-300">F1-Score (Pass)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Hyperparameters</h3>
+                            <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li><span class="font-medium">scale_pos_weight:</span> 20</li>
+                                    <li><span class="font-medium">max_depth:</span> 4</li>
+                                    <li><span class="font-medium">learning_rate:</span> 0.05</li>
+                                    <li><span class="font-medium">n_estimators:</span> 200</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-green-50 dark:bg-green-900/20 rounded-lg p-6">
+                    <div class="flex items-center mb-2">
+                        <i data-lucide="trophy" class="w-5 h-5 text-green-600 dark:text-green-400 mr-2"></i>
+                        <span class="font-semibold text-green-800 dark:text-green-200">Best Performance:</span>
+                    </div>
+                    <p class="text-green-700 dark:text-green-300">
+                        The baseline XGBoost model achieved the best balance between accuracy and pass prediction capability.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Importance Section -->
+        <section id="evaluation" class="mb-16">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 smooth-transition">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">📊 Feature Importance</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Top 10 Important Features</h3>
+                        <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                            <canvas id="importanceChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Key Sensor Statistics</h3>
+                        <div class="space-y-4">
+                            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
+                                <h4 class="font-semibold text-blue-800 dark:text-blue-200 mb-2">Sensor_131</h4>
+                                <div class="grid grid-cols-2 gap-4 text-sm">
+                                    <div>
+                                        <span class="text-gray-600 dark:text-gray-300">Pass Mean:</span>
+                                        <span class="font-medium text-gray-900 dark:text-white">0.287</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-gray-600 dark:text-gray-300">Fail Mean:</span>
+                                        <span class="font-medium text-gray-900 dark:text-white">-0.020</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
+                                <h4 class="font-semibold text-green-800 dark:text-green-200 mb-2">Sensor_34</h4>
+                                <div class="grid grid-cols-2 gap-4 text-sm">
+                                    <div>
+                                        <span class="text-gray-600 dark:text-gray-300">Pass Mean:</span>
+                                        <span class="font-medium text-gray-900 dark:text-white">0.304</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-gray-600 dark:text-gray-300">Fail Mean:</span>
+                                        <span class="font-medium text-gray-900 dark:text-white">-0.022</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4">
+                                <h4 class="font-semibold text-purple-800 dark:text-purple-200 mb-2">Sensor_578</h4>
+                                <div class="grid grid-cols-2 gap-4 text-sm">
+                                    <div>
+                                        <span class="text-gray-600 dark:text-gray-300">Pass Mean:</span>
+                                        <span class="font-medium text-gray-900 dark:text-white">-0.186</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-gray-600 dark:text-gray-300">Fail Mean:</span>
+                                        <span class="font-medium text-gray-900 dark:text-white">0.013</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Deployment Section -->
+        <section id="deployment" class="mb-16">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 smooth-transition">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">🚀 Deployment Suggestion</h2>
+                
+                <div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg p-6 mb-6">
+                    <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-4">
+                        This model can be deployed as a real-time yield predictor in a semiconductor fabrication facility. 
+                        Sensor inputs can be monitored continuously in real-time, and deviations from optimal values can 
+                        trigger automated alerts for preventive actions, enabling proactive process control and yield optimization.
+                    </p>
+                    
+                    <div class="mt-6">
+                        <button id="simulate-trigger" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium smooth-transition">
+                            <i data-lucide="bell" class="w-4 h-4 inline mr-2"></i>
+                            Simulate Sensor Trigger
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6">
+                        <div class="flex items-center mb-3">
+                            <i data-lucide="activity" class="w-6 h-6 text-blue-600 dark:text-blue-400 mr-2"></i>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Real-time Monitoring</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300">Continuous tracking of sensor values and process parameters</p>
+                    </div>
+                    
+                    <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-6">
+                        <div class="flex items-center mb-3">
+                            <i data-lucide="alert-triangle" class="w-6 h-6 text-green-600 dark:text-green-400 mr-2"></i>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Predictive Alerts</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300">Early warning system for potential yield issues</p>
+                    </div>
+                    
+                    <div class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6">
+                        <div class="flex items-center mb-3">
+                            <i data-lucide="settings" class="w-6 h-6 text-purple-600 dark:text-purple-400 mr-2"></i>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Process Control</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300">Automated adjustments and corrective actions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloads Section -->
+        <section id="downloads" class="mb-16">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 smooth-transition">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">📥 Downloads</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-red-50 dark:bg-red-900/20 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="file-text" class="w-8 h-8 text-red-600 dark:text-red-400 mr-3"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Research Report</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Complete analysis and methodology</p>
+                            </div>
+                        </div>
+                        <button class="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg smooth-transition">
+                            <i data-lucide="download" class="w-4 h-4 inline mr-2"></i>
+                            Download PDF Report
+                        </button>
+                    </div>
+                    
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="github" class="w-8 h-8 text-gray-600 dark:text-gray-400 mr-3"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Source Code</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Jupyter notebooks and Python scripts</p>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg smooth-transition">
+                            <i data-lucide="external-link" class="w-4 h-4 inline mr-2"></i>
+                            View on GitHub
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Nethra Balachandar. All rights reserved.</p>
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-600 dark:text-gray-400">
+                <p>&copy; 2024 Yield Optimization Project. Built with modern web technologies.</p>
+            </div>
         </div>
     </footer>
 

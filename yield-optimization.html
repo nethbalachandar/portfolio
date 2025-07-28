@@ -31,8 +31,8 @@
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="stat-content">
-                        <span class="stat-number">85%</span>
-                        <span class="stat-label">Classification Accuracy</span>
+                        <span class="stat-number">93.9%</span>
+                        <span class="stat-label">Model Accuracy</span>
                     </div>
                 </div>
                 <div class="stat-card">
@@ -50,90 +50,7 @@
                     </div>
                     <div class="stat-content">
                         <span class="stat-number">590</span>
-                        <span class="stat-label">Process Variables</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Overview Section -->
-            <section class="content-section">
-                <div class="section-header">
-                    <h2><i class="fas fa-eye"></i> Project Overview</h2>
-                </div>
-                <div class="overview-content">
-                    <p class="lead">
-                        This project addresses the critical challenge of yield optimization in semiconductor manufacturing by applying advanced statistical methods and machine learning techniques to identify key process variables affecting wafer quality and production yield.
-                    </p>
-                    <div class="overview-grid">
-                        <div class="overview-item">
-                            <h4>Challenge</h4>
-                            <p>Semiconductor manufacturing involves hundreds of process variables that can impact yield. Traditional methods struggle to identify critical factors efficiently.</p>
-                        </div>
-                        <div class="overview-item">
-                            <h4>Solution</h4>
-                            <p>Applied Design of Experiments (DOE) and XGBoost modeling to systematically analyze SECOM sensor data and identify critical process parameters.</p>
-                        </div>
-                        <div class="overview-item">
-                            <h4>Impact</h4>
-                            <p>Achieved 85% classification accuracy in yield prediction, enabling proactive process control and significant cost savings.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Technical Approach -->
-            <section class="content-section">
-                <div class="section-header">
-                    <h2><i class="fas fa-cogs"></i> Technical Approach</h2>
-                </div>
-                <div class="approach-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker">1</div>
-                        <div class="timeline-content">
-                            <h4>Data Preprocessing & Exploration</h4>
-                            <p>Analyzed SECOM dataset with 1567 wafers and 590 sensor measurements. Handled missing values using domain-specific imputation strategies and performed exploratory data analysis to understand variable distributions.</p>
-                            <div class="tech-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Pandas</span>
-                                <span class="tag">NumPy</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">2</div>
-                        <div class="timeline-content">
-                            <h4>Design of Experiments (DOE)</h4>
-                            <p>Implemented fractional factorial designs and response surface methodology to systematically explore the process parameter space and identify significant main effects and interactions.</p>
-                            <div class="tech-tags">
-                                <span class="tag">JMP</span>
-                                <span class="tag">Statistical Analysis</span>
-                                <span class="tag">DOE</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">3</div>
-                        <div class="timeline-content">
-                            <h4>Feature Engineering & Selection</h4>
-                            <p>Applied correlation analysis, mutual information, and recursive feature elimination to identify the most predictive sensor variables. Created interaction terms and polynomial features based on domain knowledge.</p>
-                            <div class="tech-tags">
-                                <span class="tag">Scikit-learn</span>
-                                <span class="tag">Feature Selection</span>
-                                <span class="tag">Domain Expertise</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">4</div>
-                        <div class="timeline-content">
-                            <h4>XGBoost Modeling & Optimization</h4>
-                            <p>Developed and tuned XGBoost models using cross-validation and hyperparameter optimization. Implemented SHAP analysis for model interpretability and feature importance ranking.</p>
-                            <div class="tech-tags">
-                                <span class="tag">XGBoost</span>
-                                <span class="tag">SHAP</span>
-                                <span class="tag">Hyperparameter Tuning</span>
-                            </div>
-                        </div>
+                        <span class="stat-label">Sensor Features</span>
                     </div>
                 </div>
             </section>
@@ -150,37 +67,22 @@
                             <i class="fas fa-trophy"></i>
                         </div>
                         <ul class="result-list">
-                            <li>Classification Accuracy: <strong>85%</strong></li>
-                            <li>Precision: <strong>82%</strong></li>
-                            <li>Recall: <strong>88%</strong></li>
-                            <li>F1-Score: <strong>85%</strong></li>
-                            <li>AUC-ROC: <strong>0.91</strong></li>
+                            <li>Accuracy: <strong>93.9%</strong></li>
+                            <li>Precision: <strong>67%</strong></li>
+                            <li>Recall: <strong>19%</strong></li>
+                            <li>F1-Score: <strong>30%</strong> (pass class)</li>
                         </ul>
                     </div>
                     <div class="result-card">
                         <div class="result-header">
-                            <h4>Critical Process Variables</h4>
+                            <h4>Top Predictive Features</h4>
                             <i class="fas fa-list-ol"></i>
                         </div>
                         <ul class="result-list">
-                            <li>Etch chamber pressure variations</li>
-                            <li>Deposition temperature uniformity</li>
-                            <li>Photolithography exposure dose</li>
-                            <li>Chemical mechanical planarization rate</li>
-                            <li>Ion implantation energy distribution</li>
-                        </ul>
-                    </div>
-                    <div class="result-card">
-                        <div class="result-header">
-                            <h4>Business Impact</h4>
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <ul class="result-list">
-                            <li>Reduced inspection time by <strong>40%</strong></li>
-                            <li>Prevented <strong>$2.3M</strong> in scrap costs</li>
-                            <li>Improved overall equipment effectiveness</li>
-                            <li>Enhanced process stability monitoring</li>
-                            <li>Data-driven control recommendations</li>
+                            <li>Sensor_131 (mean pass: 0.29, fail: -0.02)</li>
+                            <li>Sensor_34 (mean pass: 0.30, fail: 0.00)</li>
+                            <li>Sensor_578 (mean pass: -0.19, fail: 0.01)</li>
+                            <li>Sensor_540, Sensor_478 also significant</li>
                         </ul>
                     </div>
                 </div>
@@ -201,76 +103,23 @@
                         <div class="tab-pane active" id="preprocessing">
                             <div class="code-block">
                                 <h5>Data Preprocessing Pipeline</h5>
-                                <pre><code># Missing value imputation using domain knowledge
-def impute_sensor_data(df, sensor_type):
-    if sensor_type == 'temperature':
-        return df.fillna(df.rolling(window=5).mean())
-    elif sensor_type == 'pressure':
-        return df.fillna(method='forward')
-    return df.fillna(df.median())
-
-# Feature scaling and normalization
-scaler = RobustScaler()
-X_scaled = scaler.fit_transform(X_features)
-
-# Outlier detection using IQR method
-Q1 = df.quantile(0.25)
-Q3 = df.quantile(0.75)
-IQR = Q3 - Q1
-df_clean = df[~((df < (Q1 - 1.5 * IQR)) | (df > (Q3 + 1.5 * IQR))).any(axis=1)]</code></pre>
+                                <pre><code># Median Imputation & Scaling
+X.fillna(X.median(), inplace=True)
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)</code></pre>
                             </div>
                         </div>
                         <div class="tab-pane" id="modeling">
                             <div class="code-block">
-                                <h5>XGBoost Model Training</h5>
-                                <pre><code># XGBoost model configuration
-xgb_params = {
-    'objective': 'binary:logistic',
-    'max_depth': 6,
-    'learning_rate': 0.1,
-    'subsample': 0.8,
-    'colsample_bytree': 0.8,
-    'reg_alpha': 0.1,
-    'reg_lambda': 1.0
-}
-
-# Cross-validation with stratified sampling
-cv_results = xgb.cv(
-    xgb_params, 
-    dtrain, 
-    num_boost_round=1000,
-    nfold=5,
-    stratified=True,
-    early_stopping_rounds=50
-)
-
-# SHAP analysis for interpretability
-explainer = shap.TreeExplainer(model)
-shap_values = explainer.shap_values(X_test)</code></pre>
+                                <h5>XGBoost Model</h5>
+                                <pre><code>xgb_model = XGBClassifier(scale_pos_weight=14.1, max_depth=6, ...)
+xgb_model.fit(X_train, y_train)</code></pre>
                             </div>
                         </div>
                         <div class="tab-pane" id="deployment">
                             <div class="code-block">
-                                <h5>Real-time Monitoring System</h5>
-                                <pre><code># Real-time prediction pipeline
-class YieldPredictor:
-    def __init__(self, model_path):
-        self.model = joblib.load(model_path)
-        self.scaler = joblib.load('scaler.pkl')
-    
-    def predict_yield(self, sensor_data):
-        # Preprocess incoming data
-        scaled_data = self.scaler.transform(sensor_data)
-        
-        # Generate prediction
-        probability = self.model.predict_proba(scaled_data)
-        
-        # Return prediction with confidence
-        return {
-            'yield_class': self.model.predict(scaled_data)[0],
-            'confidence': max(probability[0]),
-            'risk_factors': self.get_risk_factors(scaled_data)
-        }</code></pre>
+                                <h5>Deployment Strategy</h5>
+                                <p>This model can be integrated into a fab’s manufacturing execution system (MES) or SPC dashboard to monitor sensor values in real time. By flagging wafers at risk of failure before inspection, it enables engineers to take preventive action, adjust process parameters, and reduce scrap. Regular retraining with new wafer lots ensures ongoing accuracy.</p>
                             </div>
                         </div>
                     </div>
@@ -285,18 +134,18 @@ class YieldPredictor:
                 <div class="enhancement-grid">
                     <div class="enhancement-card">
                         <i class="fas fa-brain"></i>
-                        <h4>Deep Learning Integration</h4>
-                        <p>Implement neural networks for complex pattern recognition and multi-output regression for simultaneous prediction of multiple quality metrics.</p>
+                        <h4>Deep Learning</h4>
+                        <p>Explore neural networks for more complex multi-output quality metrics.</p>
                     </div>
                     <div class="enhancement-card">
                         <i class="fas fa-stream"></i>
-                        <h4>Real-time Processing</h4>
-                        <p>Develop streaming analytics pipeline for continuous monitoring and immediate alert generation when process deviations are detected.</p>
+                        <h4>Streaming Analytics</h4>
+                        <p>Implement continuous data pipelines for real-time deviation alerts.</p>
                     </div>
                     <div class="enhancement-card">
                         <i class="fas fa-robot"></i>
-                        <h4>Automated Control</h4>
-                        <p>Integrate with process control systems for automated parameter adjustment based on model predictions and recommendations.</p>
+                        <h4>Process Automation</h4>
+                        <p>Use model outputs to automatically adjust tools and recipe settings.</p>
                     </div>
                 </div>
             </section>
@@ -308,65 +157,27 @@ class YieldPredictor:
                 </div>
                 <div class="tech-grid">
                     <div class="tech-category">
-                        <h4>Programming & Libraries</h4>
+                        <h4>Libraries</h4>
                         <div class="tech-items">
                             <span class="tech-item">Python</span>
                             <span class="tech-item">Pandas</span>
-                            <span class="tech-item">NumPy</span>
-                            <span class="tech-item">Scikit-learn</span>
                             <span class="tech-item">XGBoost</span>
-                            <span class="tech-item">SHAP</span>
+                            <span class="tech-item">Scikit-learn</span>
+                            <span class="tech-item">Matplotlib</span>
                         </div>
                     </div>
                     <div class="tech-category">
-                        <h4>Statistical Analysis</h4>
+                        <h4>Statistical Tools</h4>
                         <div class="tech-items">
                             <span class="tech-item">JMP</span>
-                            <span class="tech-item">Design of Experiments</span>
-                            <span class="tech-item">Response Surface Methodology</span>
-                            <span class="tech-item">Statistical Process Control</span>
+                            <span class="tech-item">DOE</span>
+                            <span class="tech-item">SPC</span>
                         </div>
-                    </div>
-                    <div class="tech-category">
-                        <h4>Visualization & Reporting</h4>
-                        <div class="tech-items">
-                            <span class="tech-item">Matplotlib</span>
-                            <span class="tech-item">Seaborn</span>
-                            <span class="tech-item">Plotly</span>
-                            <span class="tech-item">Jupyter Notebook</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section class="content-section contact-section">
-                <div class="section-header">
-                    <h2><i class="fas fa-envelope"></i> Interested in This Project?</h2>
-                </div>
-                <div class="contact-content">
-                    <p>I'd love to discuss the technical details, methodologies, or potential applications of this work.</p>
-                    <div class="contact-buttons">
-                        <a href="mailto:nethra.balachandar@gmail.com" class="btn btn-primary">
-                            <i class="fas fa-envelope"></i>
-                            Get in Touch
-                        </a>
-                        <a href="#" class="btn btn-secondary">
-                            <i class="fab fa-github"></i>
-                            View Code
-                        </a>
                     </div>
                 </div>
             </section>
         </div>
     </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Nethra Balachandar. All rights reserved.</p>
-        </div>
-    </footer>
-
     <script src="yield-optimization-script.js"></script>
 </body>
 </html>

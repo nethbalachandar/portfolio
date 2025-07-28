@@ -72,6 +72,7 @@
                             <li>Recall: <strong>19%</strong></li>
                             <li>F1-Score: <strong>30%</strong> (pass class)</li>
                         </ul>
+                        <img src="confusion_matrix.png" alt="Confusion Matrix" class="result-image">
                     </div>
                     <div class="result-card">
                         <div class="result-header">
@@ -84,6 +85,7 @@
                             <li>Sensor_578 (mean pass: -0.19, fail: 0.01)</li>
                             <li>Sensor_540, Sensor_478 also significant</li>
                         </ul>
+                        <img src="feature_importance.png" alt="Feature Importance" class="result-image">
                     </div>
                 </div>
             </section>
@@ -98,6 +100,7 @@
                         <button class="tab-button active" data-tab="preprocessing">Data Preprocessing</button>
                         <button class="tab-button" data-tab="modeling">Model Development</button>
                         <button class="tab-button" data-tab="deployment">Deployment</button>
+                        <button class="tab-button" data-tab="report">Download Report</button>
                     </div>
                     <div class="tab-content">
                         <div class="tab-pane active" id="preprocessing">
@@ -120,6 +123,14 @@ xgb_model.fit(X_train, y_train)</code></pre>
                             <div class="code-block">
                                 <h5>Deployment Strategy</h5>
                                 <p>This model can be integrated into a fab’s manufacturing execution system (MES) or SPC dashboard to monitor sensor values in real time. By flagging wafers at risk of failure before inspection, it enables engineers to take preventive action, adjust process parameters, and reduce scrap. Regular retraining with new wafer lots ensures ongoing accuracy.</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="report">
+                            <div class="code-block">
+                                <h5>Download Full Report</h5>
+                                <a href="Yield Optimization in Semiconductor Manufacturing.pdf" class="btn btn-primary" download>
+                                    <i class="fas fa-file-download"></i> Download PDF
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -178,6 +189,12 @@ xgb_model.fit(X_train, y_train)</code></pre>
             </section>
         </div>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Nethra Balachandar. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="yield-optimization-script.js"></script>
 </body>
 </html>

@@ -1,200 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yield Optimization in Semiconductor Manufacturing – Nethra Balachandar</title>
-    <link rel="stylesheet" href="yield-optimization-style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yield Optimization in Semiconductor Manufacturing</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <h1>Yield Optimization in Semiconductor Manufacturing</h1>
-                <p class="project-subtitle">Advanced Analytics for Process Control & Quality Enhancement</p>
-                <a href="index.html" class="back-link">
-                    <i class="fas fa-arrow-left"></i>
-                    Back to Portfolio
-                </a>
-            </div>
-        </div>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-indigo-600 text-white p-6">
+        <h1 class="text-3xl font-bold">Yield Optimization in Semiconductor Manufacturing</h1>
+        <p class="mt-2 text-sm">A Data-Driven Approach using XGBoost and Mutual Information</p>
     </header>
 
-    <main class="main-content">
-        <div class="container">
-            <!-- Hero Stats -->
-            <section class="hero-stats">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="stat-content">
-                        <span class="stat-number">93.9%</span>
-                        <span class="stat-label">Model Accuracy</span>
-                    </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-microchip"></i>
-                    </div>
-                    <div class="stat-content">
-                        <span class="stat-number">1567</span>
-                        <span class="stat-label">Wafers Analyzed</span>
-                    </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <div class="stat-content">
-                        <span class="stat-number">590</span>
-                        <span class="stat-label">Sensor Features</span>
-                    </div>
-                </div>
-            </section>
+    <main class="p-6 space-y-10">
+        <section id="overview">
+            <h2 class="text-xl font-semibold">Project Overview</h2>
+            <ul class="list-disc ml-6 mt-2">
+                <li>590 sensor features from SECOM dataset</li>
+                <li>Severe class imbalance: 93% fails / 7% passes</li>
+                <li>Missing values handled using median imputation</li>
+            </ul>
+            <p class="mt-4">This project leverages feature selection and XGBoost modeling to classify pass/fail labels in semiconductor wafers based on sensor data. The work emphasizes effective preprocessing and the importance of key sensors in yield outcome.</p>
+        </section>
 
-            <!-- Results & Insights -->
-            <section class="content-section">
-                <div class="section-header">
-                    <h2><i class="fas fa-chart-bar"></i> Results & Key Insights</h2>
-                </div>
-                <div class="results-grid">
-                    <div class="result-card">
-                        <div class="result-header">
-                            <h4>Model Performance</h4>
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <ul class="result-list">
-                            <li>Accuracy: <strong>93.9%</strong></li>
-                            <li>Precision: <strong>67%</strong></li>
-                            <li>Recall: <strong>19%</strong></li>
-                            <li>F1-Score: <strong>30%</strong> (pass class)</li>
-                        </ul>
-                        <img src="confusion_matrix.png" alt="Confusion Matrix" class="result-image">
-                    </div>
-                    <div class="result-card">
-                        <div class="result-header">
-                            <h4>Top Predictive Features</h4>
-                            <i class="fas fa-list-ol"></i>
-                        </div>
-                        <ul class="result-list">
-                            <li>Sensor_131 (mean pass: 0.29, fail: -0.02)</li>
-                            <li>Sensor_34 (mean pass: 0.30, fail: 0.00)</li>
-                            <li>Sensor_578 (mean pass: -0.19, fail: 0.01)</li>
-                            <li>Sensor_540, Sensor_478 also significant</li>
-                        </ul>
-                        <img src="feature_importance.png" alt="Feature Importance" class="result-image">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Technical Implementation -->
-            <section class="content-section">
-                <div class="section-header">
-                    <h2><i class="fas fa-code"></i> Technical Implementation</h2>
-                </div>
-                <div class="implementation-tabs">
-                    <div class="tab-buttons">
-                        <button class="tab-button active" data-tab="preprocessing">Data Preprocessing</button>
-                        <button class="tab-button" data-tab="modeling">Model Development</button>
-                        <button class="tab-button" data-tab="deployment">Deployment</button>
-                        <button class="tab-button" data-tab="report">Download Report</button>
-                    </div>
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="preprocessing">
-                            <div class="code-block">
-                                <h5>Data Preprocessing Pipeline</h5>
-                                <pre><code># Median Imputation & Scaling
-X.fillna(X.median(), inplace=True)
+        <section id="preprocessing">
+            <h2 class="text-xl font-semibold">Data Preprocessing</h2>
+            <p>Median imputation was used due to outlier robustness. Features were standardized with <code>StandardScaler</code>. Zero-variance features were dropped (116 removed).</p>
+            <pre class="bg-gray-200 p-4 overflow-auto text-sm mt-4"><code>data.fillna(data.median(), inplace=True)
+data['Label'] = data['Label'].map({-1: 0, 1: 1})
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)</code></pre>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="modeling">
-                            <div class="code-block">
-                                <h5>XGBoost Model</h5>
-                                <pre><code>xgb_model = XGBClassifier(scale_pos_weight=14.1, max_depth=6, ...)
-xgb_model.fit(X_train, y_train)</code></pre>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="deployment">
-                            <div class="code-block">
-                                <h5>Deployment Strategy</h5>
-                                <p>This model can be integrated into a fab’s manufacturing execution system (MES) or SPC dashboard to monitor sensor values in real time. By flagging wafers at risk of failure before inspection, it enables engineers to take preventive action, adjust process parameters, and reduce scrap. Regular retraining with new wafer lots ensures ongoing accuracy.</p>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="report">
-                            <div class="code-block">
-                                <h5>Download Full Report</h5>
-                                <a href="Yield Optimization in Semiconductor Manufacturing.pdf" class="btn btn-primary" download>
-                                    <i class="fas fa-file-download"></i> Download PDF
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        </section>
 
-            <!-- Future Enhancements -->
-            <section class="content-section">
-                <div class="section-header">
-                    <h2><i class="fas fa-rocket"></i> Future Enhancements</h2>
-                </div>
-                <div class="enhancement-grid">
-                    <div class="enhancement-card">
-                        <i class="fas fa-brain"></i>
-                        <h4>Deep Learning</h4>
-                        <p>Explore neural networks for more complex multi-output quality metrics.</p>
-                    </div>
-                    <div class="enhancement-card">
-                        <i class="fas fa-stream"></i>
-                        <h4>Streaming Analytics</h4>
-                        <p>Implement continuous data pipelines for real-time deviation alerts.</p>
-                    </div>
-                    <div class="enhancement-card">
-                        <i class="fas fa-robot"></i>
-                        <h4>Process Automation</h4>
-                        <p>Use model outputs to automatically adjust tools and recipe settings.</p>
-                    </div>
-                </div>
-            </section>
+        <section id="feature-selection">
+            <h2 class="text-xl font-semibold">Feature Selection</h2>
+            <p>Mutual Information was used to select the top 50 features due to its effectiveness with non-linear dependencies.</p>
+            <canvas id="miChart" width="400" height="300"></canvas>
+        </section>
 
-            <!-- Technologies Used -->
-            <section class="content-section">
-                <div class="section-header">
-                    <h2><i class="fas fa-tools"></i> Technologies & Tools</h2>
-                </div>
-                <div class="tech-grid">
-                    <div class="tech-category">
-                        <h4>Libraries</h4>
-                        <div class="tech-items">
-                            <span class="tech-item">Python</span>
-                            <span class="tech-item">Pandas</span>
-                            <span class="tech-item">XGBoost</span>
-                            <span class="tech-item">Scikit-learn</span>
-                            <span class="tech-item">Matplotlib</span>
-                        </div>
-                    </div>
-                    <div class="tech-category">
-                        <h4>Statistical Tools</h4>
-                        <div class="tech-items">
-                            <span class="tech-item">JMP</span>
-                            <span class="tech-item">DOE</span>
-                            <span class="tech-item">SPC</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+        <section id="modeling">
+            <h2 class="text-xl font-semibold">Modeling and Evaluation</h2>
+            <p>XGBoost with class imbalance handled via <code>scale_pos_weight ≈ 14.1</code>.</p>
+            <ul class="list-disc ml-6">
+                <li>Accuracy: 93.9%</li>
+                <li>F1-score for pass class: 0.30</li>
+            </ul>
+            <p class="mt-4">SMOTE and hyperparameter tuning were evaluated, but the original XGBoost model gave the best balance of accuracy and generalization.</p>
+        </section>
+
+        <section id="feature-importance">
+            <h2 class="text-xl font-semibold">Feature Importance</h2>
+            <p>Sensor_131, Sensor_34, and Sensor_578 had the highest influence on yield classification.</p>
+            <ul class="mt-2 list-disc ml-6">
+                <li>Sensor_131: Pass Mean = 0.287, Fail Mean = -0.02</li>
+                <li>Sensor_34: Pass Mean = 0.308, Fail Mean = 0.003</li>
+                <li>Sensor_578: Pass Mean = -0.215, Fail Mean = -0.245</li>
+            </ul>
+        </section>
+
+        <section id="deployment">
+            <h2 class="text-xl font-semibold">Deployment</h2>
+            <p>This model can be deployed in semiconductor fabs for real-time monitoring of critical sensor values. Threshold-based alerts can be integrated to enable proactive yield improvements.</p>
+        </section>
+
+        <section id="downloads">
+            <h2 class="text-xl font-semibold">Downloads</h2>
+            <a href="Yield Optimization in Semiconductor Manufacturing.pdf" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Download Full Report</a>
+        </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Nethra Balachandar. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="yield-optimization-script.js"></script>
+    <script>
+        const ctx = document.getElementById('miChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Sensor_574', 'Sensor_542', 'Sensor_478', 'Sensor_578', 'Sensor_42'],
+                datasets: [{
+                    label: 'Mutual Info Score',
+                    data: [0.028, 0.0267, 0.0265, 0.0260, 0.0253],
+                    backgroundColor: 'rgba(99, 102, 241, 0.6)'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    </script>
 </body>
 </html>

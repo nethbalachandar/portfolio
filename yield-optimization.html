@@ -37,6 +37,63 @@
             </div>
         </section>
 
+        <section class="content-section" id="how-it-works">
+            <div class="section-header">
+                <h2>How It Works: A to Z</h2>
+            </div>
+            <div class="approach-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h4>Data Collection</h4>
+                        <p>Utilized the SECOM dataset with 1,567 wafer samples, 590 sensor features, and binary yield labels (pass/fail).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h4>Preprocessing</h4>
+                        <p>Performed median imputation, label conversion, scaling, and variance filtering (116 constant features removed).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h4>Feature Selection</h4>
+                        <p>Used mutual information to rank features and retained top 50 most predictive sensors for classification.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h4>Modeling</h4>
+                        <p>Trained XGBoost with <code>scale_pos_weight ≈ 14.1</code>, achieving 93.9% accuracy and 0.30 F1-score for passes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">5</div>
+                    <div class="timeline-content">
+                        <h4>Evaluation</h4>
+                        <p>Compared baseline, SMOTE, and tuned variants. Baseline provided the best generalization and balance.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">6</div>
+                    <div class="timeline-content">
+                        <h4>Yield Insights</h4>
+                        <p>Identified Sensor_131, Sensor_34, and Sensor_578 as yield-critical. Suggested SPC-based monitoring.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">7</div>
+                    <div class="timeline-content">
+                        <h4>Deployment Potential</h4>
+                        <p>Model can be deployed to monitor sensor drift in fabs and raise alerts for proactive yield correction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="content-section" id="preprocessing">
             <div class="section-header">
                 <h2>Data Preprocessing</h2>

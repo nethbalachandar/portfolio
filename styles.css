@@ -22,6 +22,169 @@ body {
     padding: 0 20px;
 }
 
+
+/* ===== About ===== */
+.about {
+  padding: 6rem 0 4rem;
+  background: #0b0d12;
+  color: #e9edf3;
+}
+
+.about .container { max-width: 1100px; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
+
+/* Photo card */
+.about-photo {
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  background: #111522;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.06);
+}
+.about-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: .875rem;
+  object-fit: cover;
+}
+.about-photo figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: .75rem;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .85rem;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  background: rgba(59,130,246,.12);
+  color: #cfe0ff;
+  border: 1px solid rgba(59,130,246,.25);
+}
+
+/* Content */
+.about-title {
+  margin: 0;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+  line-height: 1.2;
+  letter-spacing: .2px;
+}
+.about-role {
+  margin: .25rem 0 0;
+  color: #9fb3c8;
+  font-weight: 500;
+}
+.about-meta {
+  list-style: none;
+  padding: 0;
+  margin: .75rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.25rem;
+  color: #b9c6d4;
+  font-size: .95rem;
+}
+.about-meta a { color: #cfe0ff; text-decoration: underline transparent; }
+.about-meta a:hover { text-decoration-color: currentColor; }
+
+.about-blurb {
+  margin: 1.25rem 0 1rem;
+  color: #d9e2ec;
+  line-height: 1.65;
+}
+
+/* Tags */
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 1rem 0 1.25rem;
+}
+.pill {
+  font-size: .88rem;
+  padding: .4rem .7rem;
+  border-radius: .75rem;
+  background: #141a2a;
+  border: 1px solid rgba(255,255,255,.08);
+  color: #cbd6e2;
+}
+
+/* Stats */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+  margin: 1rem 0 1.25rem;
+}
+@media (max-width: 520px) {
+  .about-stats { grid-template-columns: 1fr 1fr; }
+}
+.about-stats .stat {
+  background: #111522;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: .9rem;
+  padding: .9rem;
+  text-align: center;
+}
+.stat-number {
+  display: block;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: .3px;
+  color: #fff;
+}
+.stat-label {
+  display: block;
+  font-size: .82rem;
+  color: #9fb3c8;
+  margin-top: .15rem;
+}
+
+/* Actions (uses your existing .btn if present) */
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: .5rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .7rem 1rem;
+  border-radius: .6rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  border-color: #1e50c5;
+}
+.btn-primary:hover { filter: brightness(1.05); }
+.btn-outline {
+  background: transparent;
+  color: #cfe0ff;
+  border-color: rgba(255,255,255,.2);
+}
+.btn-outline:hover { background: rgba(255,255,255,.06); }
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
